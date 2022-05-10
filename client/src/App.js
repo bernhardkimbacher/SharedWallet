@@ -141,7 +141,7 @@ function App() {
         await txn.wait();
         console.log("Money with drew...done", txn.hash);
 
-        customerBalanceHandler();
+        participantBalanceHandler();
 
       } else {
         console.log("Ethereum object not found, install Metamask.");
@@ -180,20 +180,23 @@ function App() {
           </form>
         </div>
         <div className="mt-5">
-          <p><span className="font-bold">Participant Balance: </span>{customerTotalBalance}</p>
+          <p><span className="font-bold">Total Shared Wallet Balance: </span>{walletTotalBalance}</p>
         </div>
         <div className="mt-5">
-          <p><span className="font-bold">Wallet Owner Address: </span>{bankOwnerAddress}</p>
+          <p><span className="font-bold">Participant Balance: </span>{participantBalance}</p>
         </div>
         <div className="mt-5">
-          {isWalletConnected && <p><span className="font-bold">Your Wallet Address: </span>{customerAddress}</p>}
+          <p><span className="font-bold">Wallet Owner Address: </span>{walletOwnerAddress}</p>
+        </div>
+        <div className="mt-5">
+          {isWalletConnected && <p><span className="font-bold">Your Wallet Address: </span>{participantAddress}</p>}
           <button className="btn-connect" onClick={checkIfWalletIsConnected}>
             {isWalletConnected ? "Wallet Connected 🔒" : "Connect Wallet 🔑"}
           </button>
         </div>
       </section>
       {
-        isBankerOwner && (
+        isWalletOwner && (
           <section className="wallet-owner-section">
             <h2 className="text-xl border-b-2 border-indigo-500 px-10 py-4 font-bold">Bank Admin Panel</h2>
             <div className="p-10">
