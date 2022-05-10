@@ -15,6 +15,7 @@ contract SharedWallet {
     function depositMoney() public payable{
         require(msg.value != 0, "Cant deposit 0 Eth");
         participantBalance[msg.sender] += msg.value;
+        totalBalance += msg.value;
     }
 
     function payoutMoney(address payable _to, uint256 _amount) public {
