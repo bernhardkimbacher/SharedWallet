@@ -1,0 +1,2 @@
+@tailwind base;@tailwind components;@tailwind utilities;@layer components{.btn-connect,.btn-grey,.btn-purple,.form-style,.headline,.headline-gradient,.input-style,.main-container,.wallet-owner-section{@apply bg-indigo-900 bg-opacity-60 text-white w-4/5 mx-auto border-2 rounded-xl border-indigo-500 mb-10}}
+/*# sourceMappingURL=main.a74715e9.css.map*/
