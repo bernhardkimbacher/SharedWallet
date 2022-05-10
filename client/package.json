@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "https://bernhardkimbacher.github.io/SharedWallet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
